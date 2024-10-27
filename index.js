@@ -10,7 +10,7 @@ function createWindow() {
             enableRemoteModule: false
         }
     });
-
+    win.setMenu(null);
     win.maximize();
     win.loadURL('https://chat.openai.com');
 }
