@@ -1,0 +1,39 @@
+{
+  "name": "chat-gpt-app",
+  "version": "1.0.0",
+  "description": "An electron app to use chatgptdedicated to chatgpt",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.aliBenkarrouch.electron-chatgpt-app",
+    "productName": "ChatGPT",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "index.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  },
+  "author": "Ali Benkarrouch",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest"
+  }
+}
